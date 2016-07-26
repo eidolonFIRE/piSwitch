@@ -6,4 +6,4 @@ It utilizes a Raspberry Pi set up as a web server using nginx. You can access th
 if you open up the port to the world you can access it directly with your IP address and port using http://68.98.97.241:8080 for example.
 This is the main  page. As you can see it is very simple:
 
-![](images/table 1-1.png?raw=true)
+![](WebPageView.JPG?raw=true)
