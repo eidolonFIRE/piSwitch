@@ -10,7 +10,7 @@ This is the main  page. As you can see it is very simple:
 
 The webpage accesses an index.php file in the server which, before rendering, checks to see the current state of the device (on/off) and enables the appropriate button.
 
-Clicking on or off on the webpage sends a $getJSON to a php file which activates or deactivates an output GPIO pin using python scripts that are executed by the php code.
+Clicking on or off on the webpage sends a $getJSON request to a php file which activates or deactivates an output GPIO pin using python scripts that are executed by the php code.
 
 The output is set up as an R-S latch so only a pulse with minimum duration is needed to set or reset the latch which will ultimately close or open a relay circuit that will drive the load.
 
