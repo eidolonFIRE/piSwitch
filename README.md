@@ -1,5 +1,4 @@
-# Web-activated-power-switch-using-a-raspberry-Pi
-Web activated power switch using a Raspberry Pi as a web server. PHP and Python usage.
+# Web activated power switch using a Raspberry Pi as a web server. PHP and Python usage.
 
 This project enables you to activate a device remotely using a web browser.
 It utilizes a Raspberry Pi set up as a web server using nginx. You can access the application locally using localhost:8080 or 
