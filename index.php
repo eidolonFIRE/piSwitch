@@ -12,42 +12,19 @@ div.main {text-align: center; margin-top: 100px;}
 <script type = "text/javascript">
      $(document).ready(function(){
        $("button").click(function(event){
-          setLampState(event.target.name);
+          console.log("cycling power");
+          $.getJSON('cycle.php');
        });
      });
-     function setLampState(state){
-          $.getJSON('setLampState.php', { LampState: state }, function(data) {
-              if(data.value == "1"){
-                 $('button[name="turnOff"]').prop('disabled', true).css('background', '#D3D3D3');
-                 $('button[name="turnOn"]').prop('disabled', false).css('background', 'green');
-              }else{
-                 $('button[name="turnOn"]').prop('disabled', true).css('background', '#D3D3D3');
-                 $('button[name="turnOff"]').prop('disabled', false).css('background', 'red');
-              }
-          });
-     }
 </script>
 
 </HEAD>
 <BODY>
 <div class="main">
 
-   <h2>Device 1</h2>
+   <h2>OTP device</h2>
    <div>
-<?php
-
-  exec('sudo ./getLampStateSimple1.py', $output1, $result1);
-
-  if($output1[0] == "1"){
-    echo "     <button name=\"turnOn\" style=\"background: green\">Turn On</button> &nbsp;\n";
-    echo "     <button name=\"turnOff\" style=\"background: #D3D3D3\" disabled>Turn Off</button>"; 
-  }else{
-    echo "     <button name=\"turnOn\" style=\"background: #D3D3D3\" disabled>Turn On</button> &nbsp;\n";
-    echo "     <button name=\"turnOff\" style=\"background: red\">Turn Off</button>"; 
-  } 
-
-?>
-
+     <button name="restart">Cycle Power</button>
    </div>
 
 </div>
